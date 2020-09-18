@@ -1,0 +1,20 @@
+*.pem
+config.toml
+.env
+*.log
+*.bk
+pkg/
+
+# rustlang
+/target
+**/*.rs.bk
+#Cargo.lock
+rustfmt.toml
+
+# serverless
+node_modules
+.serverless
+bootstrap
+bmw-server.zip
+output.json
+env/db.yml

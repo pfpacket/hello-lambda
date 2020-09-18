@@ -1,0 +1,24 @@
+service: hello-lambda
+provider:
+  name: aws
+  runtime: rust
+  memorySize: 128
+
+package:
+  individually: true
+
+plugins:
+  - serverless-rust
+
+functions:
+  hello-lambda:
+    handler: hello-lambda
+    events:
+      - http:
+          path: '/hello'
+          method: GET
+          cors: true
+
+custom:
+  rust:
+    dockerTag: 'latest'
